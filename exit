@@ -1,0 +1,365 @@
+warning: in the working copy of 'notebooks/ejercicios.ipynb', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/notebooks/ejercicios.ipynb b/notebooks/ejercicios.ipynb[m
+[1mindex bad2c3b..6cd2778 100644[m
+[1m--- a/notebooks/ejercicios.ipynb[m
+[1m+++ b/notebooks/ejercicios.ipynb[m
+[36m@@ -16,31 +16,32 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 64,[m
+[32m+[m[32m   "execution_count": 1,[m
+    "metadata": {},[m
+    "outputs": [[m
+     {[m
+[31m-     "ename": "ModuleNotFoundError",[m
+[31m-     "evalue": "No module named 'src'",[m
+[31m-     "output_type": "error",[m
+[31m-     "traceback": [[m
+[31m-      "\u001b[31m---------------------------------------------------------------------------\u001b[39m",[m
+[31m-      "\u001b[31mModuleNotFoundError\u001b[39m                       Traceback (most recent call last)",[m
+[31m-      "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[64]\u001b[39m\u001b[32m, line 9\u001b[39m\n\u001b[32m      6\u001b[39m src_path = os.path.join(project_root, \u001b[33m'\u001b[39m\u001b[33msrc\u001b[39m\u001b[33m'\u001b[39m)\n\u001b[32m      7\u001b[39m sys.path.insert(\u001b[32m0\u001b[39m, src_path)  \u001b[38;5;66;03m# Añade al principio del path\u001b[39;00m\n\u001b[32m----> \u001b[39m\u001b[32m9\u001b[39m \u001b[38;5;28;01mimport\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34;01msrc\u001b[39;00m\u001b[34;01m.\u001b[39;00m\u001b[34;01mejercicio_10\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[38;5;28;01mas\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34;01ma_10\u001b[39;00m\n",[m
+[31m-      "\u001b[31mModuleNotFoundError\u001b[39m: No module named 'src'"[m
+[32m+[m[32m     "name": "stdout",[m
+[32m+[m[32m     "output_type": "stream",[m
+[32m+[m[32m     "text": [[m
+[32m+[m[32m      "Ruta configurada: c:\\CDO_Seminario_Python\\ACTIVIDAD 2\\src\n",[m
+[32m+[m[32m      "Archivos en ejercicio_10: ['functions_10.py', 'game_logic_10.py', '__init__.py', '__pycache__']\n",[m
+[32m+[m[32m      "['c:\\\\CDO_Seminario_Python\\\\ACTIVIDAD 2\\\\src', 'C:\\\\Users\\\\aleja\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\python312.zip', 'C:\\\\Users\\\\aleja\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\DLLs', 'C:\\\\Users\\\\aleja\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\Lib', 'C:\\\\Users\\\\aleja\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312', 'c:\\\\CDO_Seminario_Python\\\\ACTIVIDAD 2\\\\.venv', '', 'c:\\\\CDO_Seminario_Python\\\\ACTIVIDAD 2\\\\.venv\\\\Lib\\\\site-packages', 'c:\\\\CDO_Seminario_Python\\\\ACTIVIDAD 2\\\\.venv\\\\Lib\\\\site-packages\\\\win32', 'c:\\\\CDO_Seminario_Python\\\\ACTIVIDAD 2\\\\.venv\\\\Lib\\\\site-packages\\\\win32\\\\lib', 'c:\\\\CDO_Seminario_Python\\\\ACTIVIDAD 2\\\\.venv\\\\Lib\\\\site-packages\\\\Pythonwin']\n"[m
+      ][m
+     }[m
+    ],[m
+    "source": [[m
+[31m-    "import sys\n",[m
+     "import os\n",[m
+[32m+[m[32m    "import sys\n",[m
+     "\n",[m
+[31m-    "# Configura la ruta correctamente\n",[m
+[31m-    "project_root = os.path.abspath(os.path.join('..'))  # Sube un nivel desde notebooks\n",[m
+[31m-    "src_path = os.path.join(project_root, 'src')\n",[m
+[31m-    "sys.path.insert(0, src_path)  # Añade al principio del path\n",[m
+[32m+[m[32m    "# Configuración INFALIBLE\n",[m
+[32m+[m[32m    "project_root = os.path.abspath(os.path.join('..', '..'))  # A CDO_Seminario_Python\n",[m
+[32m+[m[32m    "src_dir = os.path.join(project_root, 'ACTIVIDAD 2', 'src')\n",[m
+[32m+[m[32m    "sys.path.insert(0, src_dir)\n",[m
+     "\n",[m
+[31m-    "import src.ejercicio_10 as a_10"[m
+[32m+[m[32m    "# Verificación EXTRA\n",[m
+[32m+[m[32m    "print(f\"Ruta configurada: {src_dir}\")\n",[m
+[32m+[m[32m    "print(f\"Archivos en ejercicio_10: {os.listdir(os.path.join(src_dir, 'ejercicio_10'))}\")\n",[m
+[32m+[m[32m    "print(sys.path) "[m
+    ][m
+   },[m
+   {[m
+[36m@@ -61,7 +62,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 48,[m
+[32m+[m[32m   "execution_count": 2,[m
+    "metadata": {},[m
+    "outputs": [],[m
+    "source": [[m
+[36m@@ -120,26 +121,220 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 58,[m
+[32m+[m[32m   "execution_count": 3,[m
+    "metadata": {},[m
+    "outputs": [[m
+     {[m
+[31m-     "ename": "AttributeError",[m
+[31m-     "evalue": "module 'actividad_10' has no attribute 'run_game'",[m
+[31m-     "output_type": "error",[m
+[31m-     "traceback": [[m
+[31m-      "\u001b[31m---------------------------------------------------------------------------\u001b[39m",[m
+[31m-      "\u001b[31mAttributeError\u001b[39m                            Traceback (most recent call last)",[m
+[31m-      "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[58]\u001b[39m\u001b[32m, line 2\u001b[39m\n\u001b[32m      1\u001b[39m \u001b[38;5;28;01mif\u001b[39;00m \u001b[34m__name__\u001b[39m == \u001b[33m\"\u001b[39m\u001b[33m__main__\u001b[39m\u001b[33m\"\u001b[39m:\n\u001b[32m----> \u001b[39m\u001b[32m2\u001b[39m     \u001b[43ma_10\u001b[49m\u001b[43m.\u001b[49m\u001b[43mrun_game\u001b[49m(rounds)\n",[m
+[31m-      "\u001b[31mAttributeError\u001b[39m: module 'actividad_10' has no attribute 'run_game'"[m
+[32m+[m[32m     "name": "stdout",[m
+[32m+[m[32m     "output_type": "stream",[m
+[32m+[m[32m     "text": [[m
+[32m+[m[32m      "\n",[m
+[32m+[m[32m      "***************** NUEVA RONDA 1 ******************\n",[m
+[32m+[m[32m      " El jugador Shadow:\n",[m
+[32m+[m[32m      "kills     :   2\n",[m
+[32m+[m[32m      "assists   :   1\n",[m
+[32m+[m[32m      "deaths    :   1\n",[m
+[32m+[m[32m      "mvp       :   1\n",[m
+[32m+[m[32m      "points    :   6\n",[m
+[32m+[m[32m      " El jugador Blaze:\n",[m
+[32m+[m[32m      "kills     :   1\n",[m
+[32m+[m[32m      "assists   :   0\n",[m
+[32m+[m[32m      "deaths    :   0\n",[m
+[32m+[m[32m      "mvp       :   0\n",[m
+[32m+[m[32m      "points    :   3\n",[m
+[32m+[m[32m      " El jugador Viper:\n",[m
+[32m+[m[32m      "kills     :   1\n",[m
+[32m+[m[32m      "assists   :   2\n",[m
+[32m+[m[32m      "deaths    :   1\n",[m
+[32m+[m[32m      "mvp       :   0\n",[m
+[32m+[m[32m      "points    :   4\n",[m
+[32m+[m[32m      " El jugador Frost:\n",[m
+[32m+[m[32m      "kills     :   0\n",[m
+[32m+[m[32m      "assists   :   1\n",[m
+[32m+[m[32m      "deaths    :   0\n",[m
+[32m+[m[32m      "mvp       :   0\n",[m
+[32m+[m[32m      "points    :   1\n",[m
+[32m+[m[32m      " El jugador Reaper:\n",[m
+[32m+[m[32m      "kills     :   1\n",[m
+[32m+[m[32m      "assists   :   1\n",[m
+[32m+[m[32m      "deaths    :   0\n",[m
+[32m+[m[32m      "mvp       :   0\n",[m
+[32m+[m[32m      "points    :   4\n",[m
+[32m+[m[32m      "--------------------------------------------------\n",[m
+[32m+[m[32m      "\n",[m
+[32m+[m[32m      " MVP en la ronda 1 es Shadow con 6 puntos \n",[m
+[32m+[m[32m      "\n",[m
+[32m+[m[32m      "--------------------------------------------------\n",[m
+[32m+[m[32m      "*******************FIN DE RONDA*******************\n",[m
+[32m+[m[32m      "\n",[m
+[32m+[m[32m      "***************** NUEVA RONDA 2 ******************\n",[m
+[32m+[m[32m      " El jugador Shadow:\n",[m
+[32m+[m[32m      "kills     :   2\n",[m
+[32m+[m[32m      "assists   :   3\n",[m
+[32m+[m[32m      "deaths    :   1\n",[m
+[32m+[m[32m      "mvp       :   1\n",[m
+[32m+[m[32m      "points    :   8\n",[m
+[32m+[m[32m      " El jugador Blaze:\n",[m
+[32m+[m[32m      "kills     :   3\n",[m
+[32m+[m[32m      "assists   :   0\n",[m
+[32m+[m[32m      "deaths    :   1\n",[m
+[32m+[m[32m      "mvp       :   0\n",[m
+[32m+[m[32m      "points    :   8\n",[m
+[32m+[m[32m      " El jugador Viper:\n",[m
+[32m+[m[32m      "kills     :   2\n",[m
+[32m+[m[32m      "assists   :   3\n",[m
+[32m+[m[32m      "deaths    :   1\n",[m
+[32m+[m[32m      "mvp       :   0\n",[m
+[32m+[m[32m      "points    :   8\n",[m
+[32m+[m[32m      " El jugador Frost:\n",[m
+[32m+[m[32m      "kills     :   2\n",[m
+[32m+[m[32m      "assists   :   2\n",[m
+[32m+[m[32m      "deaths    :   1\n",[m
+[32m+[m[32m      "mvp       :   1\n",[m
+[32m+[m[32m      "points    :   7\n",[m
+[32m+[m[32m      " El jugador Reaper:\n",[m
+[32m+[m[32m      "kills     :   1\n",[m
+[32m+[m[32m      "assists   :   2\n",[m
+[32m+[m[32m      "deaths    :   0\n",[m
+[32m+[m[32m      "mvp       :   0\n",[m
+[32m+[m[32m      "points    :   5\n",[m
+[32m+[m[32m      "--------------------------------------------------\n",[m
+[32m+[m[32m      "\n",[m
+[32m+[m[32m      " MVP en la ronda 2 es Frost con 6 puntos \n",[m
+[32m+[m[32m      "\n",[m
+[32m+[m[32m      "--------------------------------------------------\n",[m
+[32m+[m[32m      "*******************FIN DE RONDA*******************\n",[m
+[32m+[m[32m      "\n",[m
+[32m+[m[32m      "***************** NUEVA RONDA 3 ******************\n",[m
+[32m+[m[32m      " El jugador Shadow:\n",[m
+[32m+[m[32m      "kills     :   3\n",[m
+[32m+[m[32m      "assists   :   3\n",[m
+[32m+[m[32m      "deaths    :   1\n",[m
+[32m+[m[32m      "mvp       :   1\n",[m
+[32m+[m[32m      "points    :  11\n",[m
+[32m+[m[32m      " El jugador Blaze:\n",[m
+[32m+[m[32m      "kills     :   5\n",[m
+[32m+[m[32m      "assists   :   2\n",[m
+[32m+[m[32m      "deaths    :   2\n",[m
+[32m+[m[32m      "mvp       :   1\n",[m
+[32m+[m[32m      "points    :  15\n",[m
+[32m+[m[32m      " El jugador Viper:\n",[m
+[32m+[m[32m      "kills     :   3\n",[m
+[32m+[m[32m      "assists   :   4\n",[m
+[32m+[m[32m      "deaths    :   2\n",[m
+[32m+[m[32m      "mvp       :   0\n",[m
+[32m+[m[32m      "points    :  11\n",[m
+[32m+[m[32m      " El jugador Frost:\n",[m
+[32m+[m[32m      "kills     :   2\n",[m
+[32m+[m[32m      "assists   :   3\n",[m
+[32m+[m[32m      "deaths    :   1\n",[m
+[32m+[m[32m      "mvp       :   1\n",[m
+[32m+[m[32m      "points    :   8\n",[m
+[32m+[m[32m      " El jugador Reaper:\n",[m
+[32m+[m[32m      "kills     :   2\n",[m
+[32m+[m[32m      "assists   :   3\n",[m
+[32m+[m[32m      "deaths    :   0\n",[m
+[32m+[m[32m      "mvp       :   0\n",[m
+[32m+[m[32m      "points    :   9\n",[m
+[32m+[m[32m      "--------------------------------------------------\n",[m
+[32m+[m[32m      "\n",[m
+[32m+[m[32m      " MVP en la ronda 3 es Blaze con 7 puntos \n",[m
+[32m+[m[32m      "\n",[m
+[32m+[m[32m      "--------------------------------------------------\n",[m
+[32m+[m[32m      "*******************FIN DE RONDA*******************\n",[m
+[32m+[m[32m      "\n",[m
+[32m+[m[32m      "***************** NUEVA RONDA 4 ******************\n",[m
+[32m+[m[32m      " El jugador Shadow:\n",[m
+[32m+[m[32m      "kills     :   5\n",[m
+[32m+[m[32m      "assists   :   4\n",[m
+[32m+[m[32m      "deaths    :   1\n",[m
+[32m+[m[32m      "mvp       :   2\n",[m
+[32m+[m[32m      "points    :  18\n",[m
+[32m+[m[32m      " El jugador Blaze:\n",[m
+[32m+[m[32m      "kills     :   6\n",[m
+[32m+[m[32m      "assists   :   2\n",[m
+[32m+[m[32m      "deaths    :   3\n",[m
+[32m+[m[32m      "mvp       :   1\n",[m
+[32m+[m[32m      "points    :  17\n",[m
+[32m+[m[32m      " El jugador Viper:\n",[m
+[32m+[m[32m      "kills     :   3\n",[m
+[32m+[m[32m      "assists   :   6\n",[m
+[32m+[m[32m      "deaths    :   2\n",[m
+[32m+[m[32m      "mvp       :   0\n",[m
+[32m+[m[32m      "points    :  13\n",[m
+[32m+[m[32m      " El jugador Frost:\n",[m
+[32m+[m[32m      "kills     :   3\n",[m
+[32m+[m[32m      "assists   :   4\n",[m
+[32m+[m[32m      "deaths    :   2\n",[m
+[32m+[m[32m      "mvp       :   1\n",[m
+[32m+[m[32m      "points    :  11\n",[m
+[32m+[m[32m      " El jugador Reaper:\n",[m
+[32m+[m[32m      "kills     :   3\n",[m
+[32m+[m[32m      "assists   :   4\n",[m
+[32m+[m[32m      "deaths    :   0\n",[m
+[32m+[m[32m      "mvp       :   0\n",[m
+[32m+[m[32m      "points    :  13\n",[m
+[32m+[m[32m      "--------------------------------------------------\n",[m
+[32m+[m[32m      "\n",[m
+[32m+[m[32m      " MVP en la ronda 4 es Shadow con 7 puntos \n",[m
+[32m+[m[32m      "\n",[m
+[32m+[m[32m      "--------------------------------------------------\n",[m
+[32m+[m[32m      "*******************FIN DE RONDA*******************\n",[m
+[32m+[m[32m      "\n",[m
+[32m+[m[32m      "***************** NUEVA RONDA 5 ******************\n",[m
+[32m+[m[32m      " El jugador Shadow:\n",[m
+[32m+[m[32m      "kills     :   6\n",[m
+[32m+[m[32m      "assists   :   6\n",[m
+[32m+[m[32m      "deaths    :   2\n",[m
+[32m+[m[32m      "mvp       :   2\n",[m
+[32m+[m[32m      "points    :  22\n",[m
+[32m+[m[32m      " El jugador Blaze:\n",[m
+[32m+[m[32m      "kills     :   6\n",[m
+[32m+[m[32m      "assists   :   3\n",[m
+[32m+[m[32m      "deaths    :   3\n",[m
+[32m+[m[32m      "mvp       :   1\n",[m
+[32m+[m[32m      "points    :  18\n",[m
+[32m+[m[32m      " El jugador Viper:\n",[m
+[32m+[m[32m      "kills     :   5\n",[m
+[32m+[m[32m      "assists   :   6\n",[m
+[32m+[m[32m      "deaths    :   3\n",[m
+[32m+[m[32m      "mvp       :   1\n",[m
+[32m+[m[32m      "points    :  18\n",[m
+[32m+[m[32m      " El jugador Frost:\n",[m
+[32m+[m[32m      "kills     :   4\n",[m
+[32m+[m[32m      "assists   :   5\n",[m
+[32m+[m[32m      "deaths    :   2\n",[m
+[32m+[m[32m      "mvp       :   1\n",[m
+[32m+[m[32m      "points    :  15\n",[m
+[32m+[m[32m      " El jugador Reaper:\n",[m
+[32m+[m[32m      "kills     :   4\n",[m
+[32m+[m[32m      "assists   :   5\n",[m
+[32m+[m[32m      "deaths    :   1\n",[m
+[32m+[m[32m      "mvp       :   0\n",[m
+[32m+[m[32m      "points    :  16\n",[m
+[32m+[m[32m      "--------------------------------------------------\n",[m
+[32m+[m[32m      "\n",[m
+[32m+[m[32m      " MVP en la ronda 5 es Viper con 5 puntos \n",[m
+[32m+[m[32m      "\n",[m
+[32m+[m[32m      "--------------------------------------------------\n",[m
+[32m+[m[32m      "*******************FIN DE RONDA*******************\n"[m
+      ][m
+     }[m
+    ],[m
+    "source": [[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "from ejercicio_10.game_logic_10 import run_game  # Sin 'src.'\n",[m
+     "if __name__ == \"__main__\":\n",[m
+[31m-    "    a_10.run_game(rounds)\n"[m
+[32m+[m[32m    "    run_game(rounds)"[m
+    ][m
+   },[m
+[32m+[m[32m  {[m
+[32m+[m[32m   "cell_type": "code",[m
+[32m+[m[32m   "execution_count": null,[m
+[32m+[m[32m   "metadata": {},[m
+[32m+[m[32m   "outputs": [],[m
+[32m+[m[32m   "source": [][m
+[32m+[m[32m  },[m
+   {[m
+    "cell_type": "code",[m
+    "execution_count": null,[m
+[1mdiff --git a/src/ejercicio_10/functions_act_10.py b/src/ejercicio_10/functions_act_10.py[m
+[1mdeleted file mode 100644[m
+[1mindex e69de29..0000000[m
+[1mdiff --git a/src/ejercicio_10/game_logic.py b/src/ejercicio_10/game_logic.py[m
+[1mdeleted file mode 100644[m
+[1mindex 271d390..0000000[m
+[1m--- a/src/ejercicio_10/game_logic.py[m
+[1m+++ /dev/null[m
+[36m@@ -1,63 +0,0 @@[m
+[31m-def run_game(rounds):[m
+[31m-    # Se define el criterio del puntaje[m
+[31m-    kill_point_value = 2[m
+[31m-    assist_point_value = 1[m
+[31m-    surviving_point_value = 5[m
+[31m-[m
+[31m-    # Se recorre la lista, se accede al diccionario de cada ronda.[m
+[31m-    total_stats = {[m
+[31m-    'Shadow': {'kills': 0, 'assists': 0, 'deaths': 0, 'mvp': 0, 'points': 0},[m
+[31m-    'Blaze': {'kills': 0, 'assists': 0, 'deaths': 0, 'mvp': 0, 'points': 0},[m
+[31m-    'Viper': {'kills': 0, 'assists': 0, 'deaths': 0, 'mvp': 0, 'points': 0},[m
+[31m-    'Frost': {'kills': 0, 'assists': 0, 'deaths': 0, 'mvp': 0, 'points': 0},[m
+[31m-    'Reaper': {'kills': 0, 'assists': 0, 'deaths': 0, 'mvp': 0, 'points': 0}[m
+[31m-    }[m
+[31m-    round_points_initial = {[m
+[31m-    'Shadow': 0,[m
+[31m-    'Blaze': 0,[m
+[31m-    'Viper': 0,[m
+[31m-    'Frost': 0,[m
+[31m-    'Reaper': 0[m
+[31m-    }[m
+[31m-    round_number = 0[m
+[31m-[m
+[31m-    for round in rounds:[m
+[31m-        round_number += 1[m
+[31m-        round_points = round_points_initial.copy()[m
+[31m-        points_round_mvp = 0[m
+[31m-        player_round_mvp = 'zzz'[m
+[31m-    # Se accede al diccionario de los jugadores.[m
+[31m-[m
+[31m-        for player, round_stats_player in round.items():[m
+[31m-            for stat_type, stat_value in round_stats_player.items():[m
+[31m-                # Se suman los puntos dependiendo del tipo de la acción ronda por ronda[m
+[31m-                match stat_type:[m
+[31m-                    case "kills":[m
+[31m-                        round_points[player] += kill_point_value * stat_value[m
+[31m-                        total_stats[player][stat_type] += stat_value[m
+[31m-                    case "assists":[m
+[31m-                        round_points[player] += assist_point_value * stat_value[m
+[31m-                        total_stats[player][stat_type] += stat_value[m
+[31m-                    case "deaths":[m
+[31m-                        # Si es false el jugador no murio y se le suman 5 puntos. Lo contrario se le suma 1 al contador de muertes[m
+[31m-                        if not stat_value:[m
+[31m-                            round_points[player] += surviving_point_value[m
+[31m-                        else:[m
+[31m-                            total_stats[player][stat_type] += 1 [m
+[31m-            # Se imprime kills, assists y cantidad de muertes acumuladas ronda a ronda[m
+[31m-            total_stats[player]['points'] += round_points[player][m
+[31m-        # Se calcula el mvp y se suma al total de la partida [m
+[31m-        for player, points in round_points.items():[m
+[31m-            if points > points_round_mvp:[m
+[31m-                points_round_mvp = points[m
+[31m-                player_round_mvp = player[m
+[31m-        total_stats[player_round_mvp]['mvp'] += 1[m
+[31m-        print(f"{'NUEVA RONDA':*^50}")[m
+[31m-[m
+[31m-        #Imprimimos el acumulado[m
+[31m-        for player_name, player_stats in total_stats.items():[m
+[31m-            print(f' El jugador {player_name}:') [m
+[31m-            for stat_type, stat_value in player_stats.items():  [m
+[31m-                print(f'{stat_type:10s}: {stat_value:>3}')[m
+[31m-        print(f'El MVP de la ronda {round_number} es {player_round_mvp} con {points_round_mvp} puntos')  [m
+[31m-        print(f"{'FIN DE RONDA':*^50}")[m
